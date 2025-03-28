@@ -33,25 +33,21 @@ Create a `.env` file with your anthropic api key:
 ANTHROPIC_API_KEY=<api key, no quotes>
 ```
 
-## Run
+## Run Demo
 run the Claude client that connects to the weather api server:
 ```bash
 uv run client.py weather.py
 ```
 
 
-# Development
+# Development & Debug
+Use the virtual env and uv when running scripts, e.g.:
 ```bash
-# activate the python environment
 source .venv/bin/activate
-
-# run scripts with uv, e.g:
 uv run my_script.py
 ```
 
-**Debugging**
-
-Servers, tools, resources can be debugged by running the inspector. Install `npx` as necessary:
+You can use the Inspector to test server logic (requires `npx` to be installed). View server api, logs, and request history:
 ```bash
 npx @modelcontextprotocol/inspector uv --directory ${PWD} run weather.py
 ```
