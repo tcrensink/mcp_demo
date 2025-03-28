@@ -13,19 +13,45 @@ Model Context Protocol is an network-based protocol for connecting llms and serv
 
 
 # Getting started
-This demo is based on the official docs: https://modelcontextprotocol.io/quickstart
+This demo is based on the official docs: https://modelcontextprotocol.io/quickstart.
 
-# installation & environment setup
+## Requirements
+
+- `uv` for managing python installation/environment
+- an `ANTHROPIC_API_KEY`
+- `npx` (optional) for running service inspector dashboard
+
+## Installation
+```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv init . --python 3.11
 uv venv
 uv add "mcp[cli]" httpx anthropic python-dotenv ipython 
+```
+Create a `.env` file with your anthropic api key:
+```
+ANTHROPIC_API_KEY=<api key, no quotes>
+```
 
-# development
+## Run
+run the Claude client that connects to the weather api server:
+```bash
+uv run client.py weather.py
+```
+
+
+# Development
 ```bash
 # activate the python environment
 source .venv/bin/activate
 
-# run inspector to debug services (requires npx)
+# run scripts with uv, e.g:
+uv run my_script.py
+```
+
+**Debugging**
+
+Servers, tools, resources can be debugged by running the inspector. Install `npx` as necessary:
+```bash
 npx @modelcontextprotocol/inspector uv --directory ${PWD} run weather.py
 ```
