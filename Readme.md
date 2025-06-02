@@ -1,3 +1,5 @@
+This repo contains a very simple exploration of MCP, including the high-level architecture of MCP as well as a short working example from the documentation.
+
 # What is MCP?
 
 Model Context Protocol is an network-based protocol for connecting llms and services through apis [as seen here](https://modelcontextprotocol.io/introduction#general-architecture).
