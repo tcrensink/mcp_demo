@@ -1,4 +1,4 @@
-This repo contains a very simple exploration of MCP, including the high-level architecture of MCP as well as a short working example.
+This repo contains a simple working example of MCP intended for study only.
 
 # What is MCP?
 
